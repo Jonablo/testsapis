@@ -1,10 +1,14 @@
 import os
 import openai
 from pydantic import BaseModel
+from dotenv import load_dotenv
 
-openai.organization = "org-F7xuajFc7l00rI8djb2p72b9"
-openai.api_key = "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"
-print("[PROCESANDO INFO...]".center(40, "-"))
+load_dotenv()
+
+client = openai.OpenAI(
+    organization = os.getenv("OPENAI_ORGANIZATION"),
+    api_key = os.getenv("OPENAI_API_KEY"),
+)
 
 
 class Document(BaseModel):

@@ -1,3 +1,5 @@
 .vscode/
 __pycache__/
 testsApis-env/
+test_ia/__pycache__/
+.env
